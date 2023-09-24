@@ -64,10 +64,14 @@ class SideMenu extends StatelessWidget {
             },
           ),
           DrawerListTile(
-            title: "Profile",
+            title: "My Profile",
             svgSrc: "assets/icons/menu_profile.svg",
             is_selected: selectedIndex == 3 ? true : false,
-            press: () {},
+            press: () {
+              Provider.of<MenuAppController>(context, listen: false)
+                  .selectedNav = 3;
+              setStateCallBack(3);
+            },
           ),
           DrawerListTile(
             title: "Settings",

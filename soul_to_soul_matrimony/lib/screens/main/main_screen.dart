@@ -4,6 +4,7 @@ import 'package:soul_to_soul_matrimony/screens/create_marital_profile_screen.dar
 import 'package:soul_to_soul_matrimony/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:soul_to_soul_matrimony/screens/employee_profile_screen.dart';
 import 'package:soul_to_soul_matrimony/screens/search_marital_profile.dart';
 
 import 'components/side_menu.dart';
@@ -28,6 +29,7 @@ class _MainScreenState extends State<MainScreen> {
       DashboardScreen(setStateCallBack),
       CreateMaritalProfileScreen(setStateCallBack),
       SearchProfileScreen(setStateCallBack),
+      EmployeeProfileScreen(setStateCallBack),
     ];
     return Scaffold(
       key: context.read<MenuAppController>().scaffoldKey,
